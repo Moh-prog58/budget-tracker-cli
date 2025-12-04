@@ -13,8 +13,8 @@ def cli():
 
 @cli.command()
 def seed():
-    # THIS LINE WAS MISSING — THIS IS WHY IT FAILED AFTER rm budgetmaster.db
-    init_db()  # Creates tables BEFORE seeding
+    
+    init_db()  
     from budgetmaster.models.seed import seed_data
     db = next(get_db())
     seed_data(db)

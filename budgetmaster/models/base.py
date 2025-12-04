@@ -2,8 +2,7 @@
 from datetime import datetime
 from sqlalchemy import DateTime
 from sqlalchemy.orm import Mapped, mapped_column
-from ..database import Base   # ← This must import from database, not the old way
-
+from ..database import Base   
 class BaseModel(Base):
     __abstract__ = True
 
